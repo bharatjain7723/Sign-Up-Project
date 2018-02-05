@@ -51,36 +51,43 @@ min-height: 10vh;
         grid-template-columns: 15% 10% 15% 20%;
     }
 
-    .flex-container {
+    .flex-container  {
         display: flex;
         flex-direction: column;
-
-        div.branding {
-            font-family: 'Comfortaa';
-            /* color:  rgba(0, 0, 0, 0.52); */
-            color: $text-color;
-            font-weight: 400;
-            line-height: 18px;
-            /* Approximation due to font substitution */
-            text-align: left;
-            transform: scaleX(1.0001);
-            /* width and height properties ommitted due to transform */
-    
-            &#one {
-            font-size: 37.18px;
-            padding-top: 2%;
-            }
-    
-            &#two {
-            font-size: 21.69px;
-            padding-top: 3%;
-            padding-left: 40%;
-            width: 100%;
-            }
-        }
+        // position: relative;
     }
 
-    
+    .branding {
+        font-family: 'Comfortaa';
+        /* color:  rgba(0, 0, 0, 0.52); */
+        color: $text-color;
+        font-weight: 400;
+        line-height: 18px;
+        /* Approximation due to font substitution */
+        text-align: left;
+        transform: scaleX(1.0001);
+        /* width and height properties ommitted due to transform */
+    }
+    div#one {
+        // position: absolute;
+        font-size: 37.18px;
+        padding-top: 2%;
+        width: 100%;
+    }
+
+    div#two {
+        // position: absolute;
+        font-size: 21.69px;
+        // margin-top: 22%;
+        // margin-left: 2%;
+        // width: 100%;
+        padding-top:3%; 
+        padding-left: 40%;
+    }
+
+    #search{
+        display: none;
+    }
 
     img#searchImg {
         display: none;
@@ -238,89 +245,156 @@ p.form_text {
 
 /* Media queries */
 
-@media (max-width: 600px) {
-/*Header*/
-.branding {
-    margin-top: 10%;
-    #two {
-    /* font-size: 21.69px; */
-    padding-top: 7%;
-    padding-left: 90%;
-    }
-}
-header {
 
-    .nav {
-    display: none;
-    }
+@media screen and (max-width: 1055px){
 
-    img#searchImg {
-    position: relative;
-    display: block;
-    margin: 30% 0 0 250%;
-    }
-
-    p#searchText {
-    display: block;
-    position: relative;
-    margin: 20% 0 0 120px;
-    color: $text-color;
-    font-size: 13.84px;
-    /* Approximation due to font substitution */
-    font-weight: 400;
-    line-height: 18px;
-    /* Approximation due to font substitution */
-    text-align: left;
-    transform: scaleY(1.0117);
-    /* width and height properties ommitted due to transform */
-    width: 100%;
-    }
-
-    .button_2 {
-    width: 180%;
-    margin-left: 120%;
-    border-width: 1px;
-    border-radius: 5px;
-    }
-}
-/*Showcase*/
-section#login_form {
-    position: absolute;
-    bottom: 2%;
-    width: 90%;
-    /* margin: auto; */
-    box-sizing: border-box;
-    /* align-self: auto; */
-    /* padding: 1% 0 3% 1%; */
-    position: absolute;
-    top: 52%;
-    left: 14%;
-    transform: translate(-10%, -2%);
-
-        .form_text#text1 {
-        padding: 0 3% 0 3%;
+    header{
+        div#two {
+            position: relative;
+            /* font-size: 21.69px; */
+            padding-top: 5%;
+            padding-left: 50%;
+            // margin-left: 200%;        
         }
 
+        .nav{
+            width: 100%;
+        }
+    }
+
+    section#login_form{
+        min-width: 40%;
+
+        .form_text#text1 {
+            padding: 0 3% 0 3%;
+        }
+    
         .form_text#text2 {
             padding: 0 3% 0 3%;
         }
-    }
-
-    section#login_form .login input, .form_text#text3 {
-        display: none;
-    }
-
-    section#login_form .login .button_1 {
-        margin: auto;
-        width: 70%;
-        display: block;
-        box-sizing: border-box;
+        
     }
 }
 
-/* @media(max-width: 1219) {
+@media (max-width: 600px) {
+    /*Header*/
+    // .branding {
+    //     margin-top: 10%;
+        
+    header {
+
+        div#two {
+            position: relative;
+            /* font-size: 21.69px; */
+            padding-top: 7%;
+            padding-left: 90%;
+            // margin-left: 200%;        
+        }
     
-    #two{
-        width: 100%;
+        .nav {
+        display: none;
+        }
+
+
+        img#searchImg {
+            position: relative;
+            display: block;
+            margin: 30% 0 0 250%;
+            }
+        
+        p#searchText {
+            display: block;
+            position: relative;
+            margin: 20% 0 0 120px;
+            color: $text-color;
+            font-size: 13.84px;
+            /* Approximation due to font substitution */
+            font-weight: 400;
+            line-height: 18px;
+            /* Approximation due to font substitution */
+            text-align: left;
+            transform: scaleY(1.0117);
+            /* width and height properties ommitted due to transform */
+            width: 100%;           
+        }
+    
+        
+    
+        .button_2 {
+        width: 180%;
+        margin-left: 120%;
+        border-width: 1px;
+        border-radius: 5px;
+        }
     }
-} */
+    /*Showcase*/
+    section#login_form {
+        position: absolute;
+        bottom: 2%;
+        width: 90%;
+        /* margin: auto; */
+        box-sizing: border-box;
+        /* align-self: auto; */
+        /* padding: 1% 0 3% 1%; */
+        position: absolute;
+        top: 52%;
+        left: 14%;
+        transform: translate(-10%, -2%);
+    
+            .form_text#text1 {
+            padding: 0 3% 0 3%;
+            }
+    
+            .form_text#text2 {
+                padding: 0 3% 0 3%;
+            }
+        }
+    
+        section#login_form .login input, .form_text#text3 {
+            display: none;
+        }
+    
+        section#login_form .login .button_1 {
+            margin: auto;
+            width: 70%;
+            display: block;
+            box-sizing: border-box;
+        }
+    }
+    
+
+@media(max-width: 480px) {
+
+    header{
+
+        div#two {
+            /* font-size: 21.69px; */
+            padding-top: 7%;
+            padding-left: 110%;
+            position: relative;
+        }
+
+        img#searchImg {
+            position: relative;
+            display: block;
+            margin: 30% 0 0 200%;
+        }
+
+        p#searchText{
+            display: block;
+            position: relative;
+            margin: 20% 0 0 120%;;
+
+            color: $text-color;
+            font-size: 13.84px;
+            /* Approximation due to font substitution */
+            font-weight: 400;
+            line-height: 18px;
+            /* Approximation due to font substitution */
+            text-align: left;
+            transform: scaleY(1.0117);
+            /* width and height properties ommitted due to transform */
+            width: 200%;
+        }
+    }
+} 
