@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Project</title>
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <header>
@@ -30,13 +31,14 @@
                     <p class="form_text" id="text2">iimjobs.com focuses on providing premium job oppurtunities and an enhanced job seeking experience.</p>
                     <p class="form_text" id="text3">Jobseeker Login</p>
                     <form class="login" name="loginForm" method="post"> 
-                        <input type="email" placeholder="Email" name="email" id="email">
+                        <input type="text" placeholder="Email" name="email" id="email">
                         <input type="password" placeholder="Password" name="password" id="password">
-                        <button class="button_1" type="submit">Login</button>       
+                        <button class="button_1" id="submitButton">Login</button>       
                     </form>
                     <p class="form_text" id="text4">New to iimjobs? <strong>Sign up now!</strong></p>
             </section>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
